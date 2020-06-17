@@ -9,9 +9,128 @@
 
 ## FIRMANDO DIGITALMENTE DOCUMENTOS CON API JAVA
 
-´´´
-hola
-´´´
+```bash
+.
+├── main
+│   ├── java
+│   │   └── com
+│   │       └── groupdocs
+│   │           └── ui
+│   │               ├── Application.java
+│   │               ├── ApplicationStartup.java
+│   │               ├── ServerPortCustomizer.java
+│   │               ├── config
+│   │               │   ├── ApplicationConfiguration.java
+│   │               │   ├── CommonConfiguration.java
+│   │               │   ├── DefaultDirectories.java
+│   │               │   ├── GlobalConfiguration.java
+│   │               │   └── ServerConfiguration.java
+│   │               ├── exception
+│   │               │   ├── GroupDocsExceptionHandler.java
+│   │               │   ├── PasswordExceptions.java
+│   │               │   └── TotalGroupDocsException.java
+│   │               ├── model
+│   │               │   ├── request
+│   │               │   │   ├── FileTreeRequest.java
+│   │               │   │   ├── LoadDocumentPageRequest.java
+│   │               │   │   └── LoadDocumentRequest.java
+│   │               │   └── response
+│   │               │       ├── ExceptionEntity.java
+│   │               │       ├── FileDescriptionEntity.java
+│   │               │       ├── LoadDocumentEntity.java
+│   │               │       ├── PageDescriptionEntity.java
+│   │               │       └── UploadedDocumentEntity.java
+│   │               ├── signature
+│   │               │   ├── SignatureConfiguration.java
+│   │               │   ├── SignatureController.java
+│   │               │   ├── SignatureLoader.java
+│   │               │   ├── SignatureType.java
+│   │               │   ├── XMLReaderWriter.java
+│   │               │   ├── model
+│   │               │   │   ├── request
+│   │               │   │   │   ├── DeleteSignatureFileRequest.java
+│   │               │   │   │   ├── LoadSignatureImageRequest.java
+│   │               │   │   │   ├── SaveImageRequest.java
+│   │               │   │   │   ├── SaveOpticalCodeRequest.java
+│   │               │   │   │   ├── SaveStampRequest.java
+│   │               │   │   │   ├── SaveTextRequest.java
+│   │               │   │   │   ├── SignDocumentRequest.java
+│   │               │   │   │   └── SignatureFileTreeRequest.java
+│   │               │   │   ├── web
+│   │               │   │   │   ├── SignatureDataEntity.java
+│   │               │   │   │   ├── SignatureFileDescriptionEntity.java
+│   │               │   │   │   ├── SignaturePageEntity.java
+│   │               │   │   │   └── SignedDocumentEntity.java
+│   │               │   │   └── xml
+│   │               │   │       ├── OpticalXmlEntity.java
+│   │               │   │       ├── StampXmlEntity.java
+│   │               │   │       ├── StampXmlEntityList.java
+│   │               │   │       ├── TextXmlEntity.java
+│   │               │   │       ├── XmlEntity.java
+│   │               │   │       └── XmlEntityWithImage.java
+│   │               │   ├── service
+│   │               │   │   ├── SaveSignatureService.java
+│   │               │   │   ├── SaveSignatureServiceImpl.java
+│   │               │   │   ├── SignService.java
+│   │               │   │   ├── SignServiceImpl.java
+│   │               │   │   ├── SignatureHandlerFactory.java
+│   │               │   │   ├── SignatureService.java
+│   │               │   │   ├── SignatureServiceImpl.java
+│   │               │   │   └── SortedSignaturesData.java
+│   │               │   └── signer
+│   │               │       ├── BarCodeSigner.java
+│   │               │       ├── DigitalSigner.java
+│   │               │       ├── ImageSigner.java
+│   │               │       ├── QrCodeSigner.java
+│   │               │       ├── Signer.java
+│   │               │       ├── StampSigner.java
+│   │               │       └── TextSigner.java
+│   │               └── util
+│   │                   ├── Utils.java
+│   │                   └── directory
+│   │                       ├── PathConstants.java
+│   │                       └── SignatureDirectory.java
+│   ├── resources
+│   │   ├── application.properties
+│   │   ├── defaultConfiguration.yml
+│   │   ├── static
+│   │   │   └── angular
+│   │   │       └── signature
+│   │   │           ├── favicon.ico
+│   │   │           ├── index.html
+│   │   │           ├── main-es2015.js
+│   │   │           ├── main-es2015.js.map
+│   │   │           ├── main-es5.js
+│   │   │           ├── main-es5.js.map
+│   │   │           ├── polyfills-es2015.js
+│   │   │           ├── polyfills-es2015.js.map
+│   │   │           ├── polyfills-es5.js
+│   │   │           ├── polyfills-es5.js.map
+│   │   │           ├── runtime-es2015.js
+│   │   │           ├── runtime-es2015.js.map
+│   │   │           ├── runtime-es5.js
+│   │   │           ├── runtime-es5.js.map
+│   │   │           ├── styles-es2015.js
+│   │   │           ├── styles-es2015.js.map
+│   │   │           ├── styles-es5.js
+│   │   │           ├── styles-es5.js.map
+│   │   │           ├── vendor-es2015.js
+│   │   │           ├── vendor-es2015.js.map
+│   │   │           ├── vendor-es5.js
+│   │   │           └── vendor-es5.js.map
+│   │   └── templates
+│   │       └── signature.html
+│   └── webapp
+│       └── META-INF
+│           └── context.xml
+└── test
+    └── java
+        └── com
+            └── groupdocs
+                └── ui
+                    └── signature
+                        └── SignatureControllerTest.java
+```
 
 GroupDocs.Signature for Java allows you to **add a digital signature to PDF, DOCX, PPT, XLS** and over 90 formats with no external dependencies. Using powerful and flexible API you can easily add handwritten, barcode, QR code, Image and stamp signatures to a document.
 
@@ -95,13 +214,8 @@ You can run this sample by one of following methods
 
 #### Build from source
 
-Download [source code](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring/archive/master.zip) from github or clone this repository.
-
 ```bash
-git clone https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring
-cd GroupDocs.Signature-for-Java-Spring
 mvn clean spring-boot:run
-## Open http://localhost:8080/signature/ in your favorite browser.
 ```
 
 #### Build war from source
@@ -117,7 +231,7 @@ mvn package -P war
 
 #### Binary release (with all dependencies)
 
-Download [latest release](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring/releases/latest) from [releases page](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring/releases).
+.
 
 **Note**: This method is **recommended** for running this sample behind firewall.
 
@@ -129,20 +243,9 @@ java -jar signature-spring-1.7.25.jar configuration.yml
 ## Open http://localhost:8080/signature/ in your favorite browser.
 ```
 
-#### Docker image
-
-Use [docker](https://hub.docker.com/u/groupdocs) image.
-
-```bash
-mkdir DocumentSamples
-mkdir Licenses
-docker run -p 8080:8080 --env application.hostAddress=localhost -v `pwd`/DocumentSamples:/home/groupdocs/app/DocumentSamples -v `pwd`/Licenses:/home/groupdocs/app/Licenses groupdocs/signature
-## Open http://localhost:8080/signature/ in your favorite browser.
-```
-
 ## Configuration
 
-For all methods above you can adjust settings in `configuration.yml`. By default in this sample will lookup for license file in `./Licenses` folder, so you can simply put your license file in that folder or specify relative/absolute path by setting `licensePath` value in `configuration.yml`.
+Ajustes se realizan en `configuration.yml`.
 
 ### Signature configuration options
 
@@ -161,26 +264,3 @@ For all methods above you can adjust settings in `configuration.yml`. By default
 | **`handSignature`**    | Boolean |      `true`       | Enable/disable Hand signature                                                                                                                |
 | **`downloadOriginal`** | Boolean |      `true`       | Enable/disable original document downloading                                                                                                 |
 | **`downloadSigned`**   | Boolean |      `true`       | Enable/disable signed document downloading                                                                                                   |
-
-## License
-
-The MIT License (MIT).
-
-Please have a look at the LICENSE.md for more details
-
-## GroupDocs Signature on other platforms & frameworks
-
-- [Create digital signature](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Dropwizard) with JAVA Dropwizard
-- [Create digital signature](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET-MVC) with .NET MVC
-- [Create digital signature](https://github.com/groupdocs-signature/GroupDocs.Signature-for-.NET-WebForms) with .NET WebForms
-
-## Resources
-
-- **Website:** [www.groupdocs.com](http://www.groupdocs.com)
-- **Product Home:** [GroupDocs.Signature for Java](https://products.groupdocs.com/signature/java)
-- **Product API References:** [GroupDocs.Signature for Java API](https://apireference.groupdocs.com)
-- **Download:** [Download GroupDocs.Signature for Java](http://downloads.groupdocs.com/signature/java)
-- **Documentation:** [GroupDocs.Signature for Java Documentation](https://docs.groupdocs.com/display/signaturejava/Home)
-- **Free Support Forum:** [GroupDocs.Signature for Java Free Support Forum](https://forum.groupdocs.com/c/signature)
-- **Paid Support Helpdesk:** [GroupDocs.Signature for Java Paid Support Helpdesk](https://helpdesk.groupdocs.com)
-- **Blog:** [GroupDocs.Signature for Java Blog](https://blog.groupdocs.com/category/groupdocs-signature-product-family)
