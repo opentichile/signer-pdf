@@ -132,11 +132,7 @@
                         └── SignatureControllerTest.java
 ```
 
-GroupDocs.Signature for Java allows you to **add a digital signature to PDF, DOCX, PPT, XLS** and over 90 formats with no external dependencies. Using powerful and flexible API you can easily add handwritten, barcode, QR code, Image and stamp signatures to a document.
-
-This web application demonstrates all GroupDocs.Signature features with simple modern UI which can be used as standalone or be integrated into your project.
-
-**Note:** without a license application will run in trial mode, purchase [GroupDocs.Signature for Java license](https://purchase.groupdocs.com/order-online-step-1-of-8.aspx) or request [GroupDocs.Signature for Java temporary license](https://purchase.groupdocs.com/temporary-license).
+SIGNER-PDF permite firmar digitalmente Archivos **add PDF, DOCX, PPT, XLS**. Utilizando una poderosa y flexible API para firmar manualmente, codigo de barra, QR code, Imagen y Firma estampada al documento.
 
 ## Demo Video
 
@@ -210,7 +206,7 @@ This web application demonstrates all GroupDocs.Signature features with simple m
 
 ## How to run
 
-You can run this sample by one of following methods
+Tu puedes ejecutar este aplicativo por medio de los siguientes métodos
 
 #### Build from source
 
@@ -220,27 +216,9 @@ mvn clean spring-boot:run
 
 #### Build war from source
 
-Download [source code](https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring/archive/master.zip) from github or clone this repository.
-
 ```bash
-git clone https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring
-cd GroupDocs.Signature-for-Java-Spring
 mvn package -P war
 ## Deploy this war on any server
-```
-
-#### Binary release (with all dependencies)
-
-.
-
-**Note**: This method is **recommended** for running this sample behind firewall.
-
-```bash
-curl -J -L -o release.tar.gz https://github.com/groupdocs-signature/GroupDocs.Signature-for-Java-Spring/releases/download/1.7.25/release.tar.gz
-tar -xvzf release.tar.gz
-cd release
-java -jar signature-spring-1.7.25.jar configuration.yml
-## Open http://localhost:8080/signature/ in your favorite browser.
 ```
 
 ## Configuration
